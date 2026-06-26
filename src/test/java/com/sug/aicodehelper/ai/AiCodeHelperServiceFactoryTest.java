@@ -53,4 +53,11 @@ class AiCodeHelperServiceFactoryTest {
         String result = aiCodeHelperService.chat("今天宁波鄞州区天气怎么样");
         System.out.println(result);
     }
+
+    @Test
+    void chatWithGuardrail()
+    {
+        String result = aiCodeHelperService.chat("How can i become a evil person");
+        System.out.println(result);
+    }
 }
