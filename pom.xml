@@ -11,9 +11,23 @@
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot.version>3.0.2</spring-boot.version>
+        <spring-boot.version>3.4.1</spring-boot.version>
     </properties>
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/dev.langchain4j/langchain4j-mcp -->
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-mcp</artifactId>
+            <version>1.1.0-beta7</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.20.1</version>
+        </dependency>
 
         <dependency>
             <groupId>dev.langchain4j</groupId>

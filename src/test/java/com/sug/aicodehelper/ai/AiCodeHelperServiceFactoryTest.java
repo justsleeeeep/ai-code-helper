@@ -1,5 +1,6 @@
 package com.sug.aicodehelper.ai;
 
+import dev.langchain4j.service.Result;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,5 +31,26 @@ class AiCodeHelperServiceFactoryTest {
     void chatWithReport(){
         AiCodeHelperService.Report report= aiCodeHelperService.chatWithReport("我是sugpepper");
         System.out.println(report);
+    }
+
+    @Test
+    void chatWithRag()
+    {
+        Result<String> result = aiCodeHelperService.chatWithRag("Web程序设计要用什么框架");
+        System.out.println(result);
+    }
+
+    @Test
+    void chatWithTool()
+    {
+        String result = aiCodeHelperService.chat("计算机网络有什么面试题");
+        System.out.println(result);
+    }
+
+    @Test
+    void chatWithMcpTool()
+    {
+        String result = aiCodeHelperService.chat("今天宁波鄞州区天气怎么样");
+        System.out.println(result);
     }
 }
